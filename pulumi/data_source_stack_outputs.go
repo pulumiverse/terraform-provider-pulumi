@@ -4,7 +4,6 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"log"
 	"net/http"
 	"time"
 
@@ -66,9 +65,6 @@ func dataSourceStackOutputsRead(ctx context.Context, d *schema.ResourceData, m i
 	expected_urn := fmt.Sprintf("urn:pulumi:%s::%s::pulumi:pulumi:Stack::%s-%s", stack, project, project, stack)
 	for _, resourceInterface := range resources {
 		resource := resourceInterface.(map[string]interface{})
-
-		log.Println(fmt.Sprintf("[DEBUG] FOUND URN: %s", resource["urn"].(string)))
-
 		if resource["urn"].(string) == expected_urn {
 			stack_outputs = resource["outputs"].(map[string]interface{})
 		}
