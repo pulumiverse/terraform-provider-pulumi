@@ -51,10 +51,6 @@ func dataSourceStackOutputsRead(ctx context.Context, d *schema.ResourceData, m i
 	if res.Body != nil {
 		defer res.Body.Close()
 	}
-	// body, err := ioutil.ReadAll(res.Body)
-	// if err != nil {
-	// 	return diag.FromErr(err)
-	// }
 
 	// Parse the response
 	response := make(map[string]interface{}, 0)

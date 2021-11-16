@@ -1,5 +1,13 @@
 # Terraform Provider Pulumi
 
+This is the `transcend-io/pulumi` provider available on the Terraform registry.
+
+It's goal is to allow terraform projects to consume pulumi outputs from the Pulumi Cloud via data source lookups.
+
+Check out the `examples` directory for usage.
+
+## Building
+
 Run the following command to build the provider
 
 ```shell
