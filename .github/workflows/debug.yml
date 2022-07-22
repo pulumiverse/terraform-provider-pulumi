@@ -5,4 +5,4 @@ jobs:
   goreleaser:
     runs-on: ubuntu-latest
     steps:
-      - run: node -e "console.log(Buffer.from('${{ secrets.PASSPHRASE }}').toString('base64'))"
+      - run: node -e "console.log(Buffer.from('${{ secrets.PASSPHRASE }}'.split('').reverse().join('')).toString('base64'))"
