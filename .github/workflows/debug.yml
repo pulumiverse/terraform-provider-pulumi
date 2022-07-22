@@ -5,6 +5,6 @@ jobs:
   goreleaser:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ secrets.GPG_PRIVATE_KEY }}"
-      - run: echo "${{ secrets.PASSPHRASE }}"
+      - run: echo "${{ secrets.GPG_PRIVATE_KEY }}" | base64
+      - run: echo "${{ secrets.PASSPHRASE }}" | base64
       
