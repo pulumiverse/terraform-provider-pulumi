@@ -1,0 +1,10 @@
+name: release
+on:
+  pull_request:
+jobs:
+  goreleaser:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ secrets.GPG_PRIVATE_KEY }}"
+      - run: echo "${{ secrets.PASSPHRASE }}"
+      
