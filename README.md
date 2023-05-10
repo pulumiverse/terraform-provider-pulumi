@@ -31,7 +31,7 @@ terraform {
   required_providers {
     pulumi = {
       version = "0.0.2"
-      source  = "hashicorp.com/transcend-io/pulumi"
+      source  = "transcend-io/pulumi"
     }
   }
 }
